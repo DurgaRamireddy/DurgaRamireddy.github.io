@@ -211,71 +211,80 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <div class="proj-tools"><span class="tool">Kali Linux</span><span class="tool">Ubuntu</span><span class="tool">Auth Logs</span><span class="tool">MITRE ATT&CK</span></div>
     </a>
 
-    <a class="proj" href="https://github.com/DurgaRamireddy/PowerShell-LotL-Investigation-Lab" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">SOC &middot; Host Forensics</div>
-      <div class="proj-title">PowerShell Living-off-the-Land Investigation</div>
-      <p class="proj-desc">Host-based investigation of a LotL attack using Kibana. Identified 9 IOCs mapped to 6 MITRE ATT&CK techniques including persistence, defense evasion, and lateral movement.</p>
-      <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">PowerShell</span><span class="tool">MITRE ATT&CK</span><span class="tool">Windows Event Logs</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/Security-Onion-Lab" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">SOC &middot; Network Monitoring</div>
-      <div class="proj-title">Security Onion IDS Deployment Lab</div>
-      <p class="proj-desc">Deployed Security Onion with Zeek and Suricata for full-packet network monitoring. Analyzed traffic and tuned detection rules to reduce false positives across multiple protocols.</p>
-      <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Zeek</span><span class="tool">Suricata</span><span class="tool">PCAP</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/Vulnerable-Web-Server-Traffic-Analysis-Lab" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">SOC &middot; Traffic Analysis</div>
-      <div class="proj-title">Vulnerable Web Server Traffic Analysis</div>
-      <p class="proj-desc">Investigated malicious traffic against a vulnerable web server using Kibana and Packetbeat. Identified attack vectors and produced structured remediation recommendations.</p>
-      <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">Packetbeat</span><span class="tool">ELK Stack</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/Sandworm-APT-Analysis" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">Threat Intelligence</div>
-      <div class="proj-title">Sandworm APT Analysis</div>
-      <p class="proj-desc">Technical deep-dive into the Russia-nexus Sandworm group. Reconstructed campaigns from open-source reporting and produced a full MITRE ATT&CK TTP mapping for defensive reference.</p>
-      <div class="proj-tools"><span class="tool">MITRE ATT&CK</span><span class="tool">OSINT</span><span class="tool">APT Research</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/Crown-Jewel-Security-Analysis---Insider-Data-Theft-at-Tesla" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">Security Risk &amp; Governance</div>
-      <div class="proj-title">Crown Jewel Analysis - Insider Threat at Tesla</div>
-      <p class="proj-desc">Applied the Bowtie risk model to an insider IP theft case. Evaluated threat actors, escalation paths, consequences, and control effectiveness against Tesla's highest-value assets.</p>
-      <div class="proj-tools"><span class="tool">Bowtie Model</span><span class="tool">Risk Analysis</span><span class="tool">Insider Threat</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/SCADA-Modbus-Attack-Detection-with-Security-Onion" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">OT / ICS Security</div>
-      <div class="proj-title">SCADA Modbus Attack Detection</div>
-      <p class="proj-desc">Simulated Modbus packet injection attacks against a SCADA environment using LogixPro PLC simulation. Detected and documented attack patterns using Security Onion.</p>
-      <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Modbus</span><span class="tool">LogixPro</span><span class="tool">ICS</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/AES-Image-Encryption-Analysis" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">Applied Cryptography</div>
-      <div class="proj-title">AES Image Encryption Analysis</div>
-      <p class="proj-desc">Implemented AES encryption on digital images and demonstrated visual pattern leakage in ECB mode versus CBC - illustrating why cipher mode selection matters in real-world deployments.</p>
-      <div class="proj-tools"><span class="tool">AES</span><span class="tool">Python</span><span class="tool">ECB vs CBC</span><span class="tool">Cryptanalysis</span></div>
-    </a>
-
-    <a class="proj" href="https://github.com/DurgaRamireddy/Classical-Cryptanalysis-Lab" target="_blank">
-      <span class="proj-arrow">↗</span>
-      <div class="proj-domain">Applied Cryptography</div>
-      <div class="proj-title">Classical Cryptanalysis Lab</div>
-      <p class="proj-desc">Analyzed and decrypted classical ciphers including Caesar, Beaufort, and substitution ciphers. Applied frequency analysis and known-plaintext techniques to break each cipher.</p>
-      <div class="proj-tools"><span class="tool">CrypTool 2</span><span class="tool">Frequency Analysis</span><span class="tool">Cryptanalysis</span></div>
-    </a>
-
   </div>
+
+  <div id="more-projects" style="display:none;">
+    <div class="proj-grid" style="margin-top:1px;">
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/PowerShell-LotL-Investigation-Lab" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">SOC &middot; Host Forensics</div>
+        <div class="proj-title">PowerShell Living-off-the-Land Investigation</div>
+        <p class="proj-desc">Host-based investigation of a LotL attack using Kibana. Identified 9 IOCs mapped to 6 MITRE ATT&CK techniques including persistence, defense evasion, and lateral movement.</p>
+        <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">PowerShell</span><span class="tool">MITRE ATT&CK</span><span class="tool">Windows Event Logs</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/Security-Onion-Lab" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">SOC &middot; Network Monitoring</div>
+        <div class="proj-title">Security Onion IDS Deployment Lab</div>
+        <p class="proj-desc">Deployed Security Onion with Zeek and Suricata for full-packet network monitoring. Analyzed traffic and tuned detection rules to reduce false positives across multiple protocols.</p>
+        <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Zeek</span><span class="tool">Suricata</span><span class="tool">PCAP</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/Vulnerable-Web-Server-Traffic-Analysis-Lab" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">SOC &middot; Traffic Analysis</div>
+        <div class="proj-title">Vulnerable Web Server Traffic Analysis</div>
+        <p class="proj-desc">Investigated malicious traffic against a vulnerable web server using Kibana and Packetbeat. Identified attack vectors and produced structured remediation recommendations.</p>
+        <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">Packetbeat</span><span class="tool">ELK Stack</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/Sandworm-APT-Analysis" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">Threat Intelligence</div>
+        <div class="proj-title">Sandworm APT Analysis</div>
+        <p class="proj-desc">Technical deep-dive into the Russia-nexus Sandworm group. Reconstructed campaigns from open-source reporting and produced a full MITRE ATT&CK TTP mapping for defensive reference.</p>
+        <div class="proj-tools"><span class="tool">MITRE ATT&CK</span><span class="tool">OSINT</span><span class="tool">APT Research</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/Crown-Jewel-Security-Analysis---Insider-Data-Theft-at-Tesla" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">Security Risk &amp; Governance</div>
+        <div class="proj-title">Crown Jewel Analysis - Insider Threat at Tesla</div>
+        <p class="proj-desc">Applied the Bowtie risk model to an insider IP theft case. Evaluated threat actors, escalation paths, consequences, and control effectiveness against Tesla's highest-value assets.</p>
+        <div class="proj-tools"><span class="tool">Bowtie Model</span><span class="tool">Risk Analysis</span><span class="tool">Insider Threat</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/SCADA-Modbus-Attack-Detection-with-Security-Onion" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">OT / ICS Security</div>
+        <div class="proj-title">SCADA Modbus Attack Detection</div>
+        <p class="proj-desc">Simulated Modbus packet injection attacks against a SCADA environment using LogixPro PLC simulation. Detected and documented attack patterns using Security Onion.</p>
+        <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Modbus</span><span class="tool">LogixPro</span><span class="tool">ICS</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/AES-Image-Encryption-Analysis" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">Applied Cryptography</div>
+        <div class="proj-title">AES Image Encryption Analysis</div>
+        <p class="proj-desc">Implemented AES encryption on digital images and demonstrated visual pattern leakage in ECB mode versus CBC - illustrating why cipher mode selection matters in real-world deployments.</p>
+        <div class="proj-tools"><span class="tool">AES</span><span class="tool">Python</span><span class="tool">ECB vs CBC</span><span class="tool">Cryptanalysis</span></div>
+      </a>
+
+      <a class="proj" href="https://github.com/DurgaRamireddy/Classical-Cryptanalysis-Lab" target="_blank">
+        <span class="proj-arrow">↗</span>
+        <div class="proj-domain">Applied Cryptography</div>
+        <div class="proj-title">Classical Cryptanalysis Lab</div>
+        <p class="proj-desc">Analyzed and decrypted classical ciphers including Caesar, Beaufort, and substitution ciphers. Applied frequency analysis and known-plaintext techniques to break each cipher.</p>
+        <div class="proj-tools"><span class="tool">CrypTool 2</span><span class="tool">Frequency Analysis</span><span class="tool">Cryptanalysis</span></div>
+      </a>
+
+    </div>
+  </div>
+
+  <button onclick="var el=document.getElementById('more-projects'); var open=el.style.display==='block'; el.style.display=open?'none':'block'; this.textContent=open?'Show all 12 projects ↓':'Show less ↑';" style="margin-top:1.5rem; background:none; border:1px solid var(--rule); color:var(--ink3); font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.75rem 1.5rem; cursor:pointer; border-radius:2px; transition:all 0.2s; width:100%;">Show all 12 projects ↓</button>
+
 </section>
 
 <section class="section" id="skills">
