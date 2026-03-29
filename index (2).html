@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durga Ramireddy — Cybersecurity</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+:root {
+  --ink: #0f0f0e;
+  --ink2: #4a4a47;
+  --ink3: #9a9991;
+  --paper: #f8f6f1;
+  --paper2: #f0ede5;
+  --paper3: #e8e4d8;
+  --rule: #d6d1c4;
+  --accent: #1a3a2a;
+  --accent-mid: #2d5c42;
+  --serif: 'Instrument Serif', Georgia, serif;
+  --sans: 'DM Sans', system-ui, sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+
+body { font-family: var(--sans); background: var(--paper); color: var(--ink); font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 99;
+  background: rgba(248,246,241,0.93);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--rule);
+  padding: 0 3rem; height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-name { font-family: var(--serif); font-size: 1.1rem; }
+.nav-links { display: flex; gap: 2.5rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--ink); }
+.nav-cta { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); text-decoration: none; padding: 0.5rem 1.2rem; border: 1px solid var(--accent); border-radius: 2px; transition: all 0.2s; }
+.nav-cta:hover { background: var(--accent); color: var(--paper); }
+
+.hero {
+  padding: 148px 3rem 96px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: end;
+  max-width: 1280px; margin: 0 auto;
+  border-bottom: 1px solid var(--rule);
+}
+.hero-kicker { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink3); margin-bottom: 2rem; }
+.hero h1 { font-family: var(--serif); font-size: clamp(3rem, 5vw, 5rem); font-weight: 400; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 2rem; }
+.hero h1 em { font-style: italic; color: var(--accent-mid); }
+.hero-bio { font-size: 0.975rem; color: var(--ink2); line-height: 1.8; max-width: 400px; margin-bottom: 2.5rem; }
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.btn-solid { display: inline-block; padding: 0.65rem 1.5rem; background: var(--accent); color: var(--paper); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 2px; transition: background 0.2s; }
+.btn-solid:hover { background: var(--accent-mid); }
+.btn-text { display: inline-block; font-size: 0.72rem; font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink2); text-decoration: none; border-bottom: 1px solid var(--rule); padding-bottom: 1px; transition: color 0.2s, border-color 0.2s; }
+.btn-text:hover { color: var(--ink); border-color: var(--ink); }
+
+.stats { display: flex; flex-direction: column; }
+.stat-row { display: grid; grid-template-columns: 1fr auto; align-items: baseline; padding: 1.25rem 0; border-top: 1px solid var(--rule); }
+.stat-row:last-child { border-bottom: 1px solid var(--rule); }
+.stat-label { font-size: 0.78rem; color: var(--ink3); }
+.stat-val { font-family: var(--serif); font-size: 1.85rem; letter-spacing: -0.02em; }
+.stat-unit { font-family: var(--sans); font-size: 0.68rem; color: var(--ink3); margin-left: 0.3rem; }
+
+.section { max-width: 1280px; margin: 0 auto; padding: 80px 3rem; border-bottom: 1px solid var(--rule); }
+.sec-label { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink3); margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
+.sec-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+.sec-title { font-family: var(--serif); font-size: clamp(1.75rem, 3vw, 2.5rem); font-weight: 400; letter-spacing: -0.02em; margin-bottom: 0.75rem; line-height: 1.15; }
+.sec-sub { font-size: 0.875rem; color: var(--ink2); line-height: 1.8; max-width: 520px; margin-bottom: 3rem; }
+
+.certs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.cert { background: var(--paper); padding: 1.75rem 1.5rem; transition: background 0.2s; }
+.cert:hover { background: var(--paper2); }
+.cert-abbr { font-family: var(--serif); font-size: 2.2rem; color: var(--accent-mid); margin-bottom: 0.75rem; letter-spacing: -0.02em; }
+.cert-name { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.2rem; line-height: 1.4; }
+.cert-by { font-size: 0.72rem; color: var(--ink3); }
+
+.proj-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.proj {
+  background: var(--paper); padding: 2rem 1.75rem;
+  text-decoration: none; display: flex; flex-direction: column; gap: 0.75rem;
+  transition: background 0.2s; position: relative;
+}
+.proj:hover { background: var(--paper2); }
+.proj-domain { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink3); }
+.proj-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 400; color: var(--ink); line-height: 1.35; letter-spacing: -0.01em; }
+.proj-desc { font-size: 0.82rem; color: var(--ink2); line-height: 1.78; flex: 1; }
+.proj-tools { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.25rem; }
+.tool { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.04em; color: var(--ink3); background: var(--paper3); padding: 0.18rem 0.48rem; border-radius: 2px; }
+.proj-arrow { position: absolute; top: 1.75rem; right: 1.75rem; font-size: 0.72rem; color: var(--rule); transition: color 0.2s, transform 0.2s; }
+.proj:hover .proj-arrow { color: var(--ink3); transform: translate(2px,-2px); }
+
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem; }
+.skill-col-title { font-family: var(--mono); font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink3); padding-bottom: 1rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.25rem; }
+.skill-list { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+.skill-list li { font-size: 0.875rem; color: var(--ink2); display: flex; align-items: baseline; gap: 0.6rem; }
+.skill-list li::before { content: '—'; color: var(--rule); font-size: 0.65rem; flex-shrink: 0; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+.contact-intro { font-family: var(--serif); font-size: 1.5rem; font-weight: 400; line-height: 1.5; letter-spacing: -0.01em; margin-bottom: 1.5rem; }
+.contact-note { font-size: 0.875rem; color: var(--ink2); line-height: 1.8; }
+.contact-links { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 4px; overflow: hidden; }
+.contact-link { display: flex; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; background: var(--paper); text-decoration: none; transition: background 0.2s; }
+.contact-link:hover { background: var(--paper2); }
+.contact-type { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--ink3); margin-bottom: 0.25rem; }
+.contact-val { font-size: 0.875rem; color: var(--ink); }
+.contact-arr { color: var(--rule); font-size: 0.72rem; transition: color 0.2s; }
+.contact-link:hover .contact-arr { color: var(--ink3); }
+
+footer { max-width: 1280px; margin: 0 auto; padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; }
+.footer-l { font-family: var(--serif); font-size: 0.95rem; color: var(--ink3); }
+.footer-r { font-family: var(--mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink3); }
+
+@media (max-width: 900px) {
+  nav { padding: 0 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; padding: 120px 1.5rem 60px; gap: 3rem; }
+  .stats { order: -1; }
+  .section { padding: 60px 1.5rem; }
+  .certs-grid, .proj-grid, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 0.5rem; padding: 2rem 1.5rem; text-align: center; }
+}
+
+@keyframes rise { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: none; } }
+.hero { animation: rise 0.5s ease both; }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Durga Ramireddy</span>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Get in touch</a>
+</nav>
+
+<div class="hero">
+  <div>
+    <p class="hero-kicker">Cybersecurity &middot; SOC Analysis &middot; Threat Detection</p>
+    <h1>Building defenses,<br><em>not just studying</em><br>them.</h1>
+    <p class="hero-bio">MS Cybersecurity candidate at the University of Houston (GPA 3.90). I run adversary emulation labs, triage real endpoint alerts, and document findings with the rigor of a practicing analyst. Seeking SOC Analyst roles.</p>
+    <div class="hero-ctas">
+      <a class="btn-solid" href="#projects">View my work</a>
+      <a class="btn-text" href="https://github.com/DurgaRamireddy" target="_blank">GitHub ↗</a>
+      <a class="btn-text" href="https://www.linkedin.com/in/durga-ramireddy/" target="_blank">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat-row">
+      <span class="stat-label">Documented labs</span>
+      <span class="stat-val">10+<span class="stat-unit">projects</span></span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Graduate GPA</span>
+      <span class="stat-val">3.90<span class="stat-unit">/ 4.0</span></span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Certifications</span>
+      <span class="stat-val">3<span class="stat-unit">active</span></span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-label">Graduating</span>
+      <span class="stat-val">May<span class="stat-unit">2026</span></span>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="sec-label">Credentials</div>
+  <div class="certs-grid">
+    <div class="cert">
+      <div class="cert-abbr">Sec+</div>
+      <div class="cert-name">CompTIA Security+</div>
+      <div class="cert-by">CompTIA</div>
+    </div>
+    <div class="cert">
+      <div class="cert-abbr">CCP</div>
+      <div class="cert-name">AWS Cloud Practitioner</div>
+      <div class="cert-by">Amazon Web Services</div>
+    </div>
+    <div class="cert">
+      <div class="cert-abbr">CJCA</div>
+      <div class="cert-name">Junior Cybersecurity Analyst</div>
+      <div class="cert-by">Cisco Networking Academy</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="sec-label">Lab Portfolio</div>
+  <h2 class="sec-title">Projects</h2>
+  <p class="sec-sub">Every project below is a self-directed lab — built, executed, and documented from scratch.</p>
+  <div class="proj-grid">
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Splunk-SIEM-SOC-Detection-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; SIEM</div>
+      <div class="proj-title">Splunk SIEM SOC Detection Lab</div>
+      <p class="proj-desc">Self-directed Splunk deployment simulating a SOC environment. Wrote SPL queries for alert triage, built detection dashboards, and documented investigation workflows across multiple attack scenarios.</p>
+      <div class="proj-tools"><span class="tool">Splunk</span><span class="tool">SPL</span><span class="tool">SIEM</span><span class="tool">Alert Triage</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Microsoft-Defender-Caldera-Detection-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Endpoint Detection</div>
+      <div class="proj-title">Microsoft Defender Detection Gap Analysis</div>
+      <p class="proj-desc">Enterprise SOC lab using Windows Server 2022 with Active Directory and a domain-joined endpoint onboarded to Defender for Business. Ran three MITRE Caldera adversary profiles and triaged alerts from a Tier 1 SOC perspective to identify concrete detection gaps.</p>
+      <div class="proj-tools"><span class="tool">Microsoft Defender</span><span class="tool">MITRE Caldera</span><span class="tool">Active Directory</span><span class="tool">Windows Server 2022</span><span class="tool">MITRE ATT&CK</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Home-SOC-Lab---Simulated-Intrusion-Privilege-Escalation-Investigation" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Incident Response</div>
+      <div class="proj-title">Home SOC Lab — Intrusion & Privilege Escalation</div>
+      <p class="proj-desc">Simulated SSH brute-force and privilege escalation via sudo misconfiguration. Reconstructed attacker timeline from authentication logs and documented findings in a Tier 1 triage format.</p>
+      <div class="proj-tools"><span class="tool">Kali Linux</span><span class="tool">Ubuntu</span><span class="tool">Auth Logs</span><span class="tool">MITRE ATT&CK</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/PowerShell-LotL-Investigation-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Host Forensics</div>
+      <div class="proj-title">PowerShell Living-off-the-Land Investigation</div>
+      <p class="proj-desc">Host-based investigation of a LotL attack using Kibana. Identified 9 IOCs mapped to 6 MITRE ATT&CK techniques including persistence, defense evasion, and lateral movement.</p>
+      <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">PowerShell</span><span class="tool">MITRE ATT&CK</span><span class="tool">Windows Event Logs</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Security-Onion-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Network Monitoring</div>
+      <div class="proj-title">Security Onion IDS Deployment Lab</div>
+      <p class="proj-desc">Deployed Security Onion with Zeek and Suricata for full-packet network monitoring. Analyzed traffic and tuned detection rules to reduce false positives across multiple protocols.</p>
+      <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Zeek</span><span class="tool">Suricata</span><span class="tool">PCAP</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Vulnerable-Web-Server-Traffic-Analysis-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Traffic Analysis</div>
+      <div class="proj-title">Vulnerable Web Server Traffic Analysis</div>
+      <p class="proj-desc">Investigated malicious traffic against a vulnerable web server using Kibana and Packetbeat. Identified attack vectors and produced structured remediation recommendations.</p>
+      <div class="proj-tools"><span class="tool">Kibana</span><span class="tool">Packetbeat</span><span class="tool">ELK Stack</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Sandworm-APT-Analysis" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">Threat Intelligence</div>
+      <div class="proj-title">Sandworm APT Analysis</div>
+      <p class="proj-desc">Technical deep-dive into the Russia-nexus Sandworm group. Reconstructed campaigns from open-source reporting and produced a full MITRE ATT&CK TTP mapping for defensive reference.</p>
+      <div class="proj-tools"><span class="tool">MITRE ATT&CK</span><span class="tool">OSINT</span><span class="tool">APT Research</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/SCADA-Modbus-Attack-Detection-with-Security-Onion" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">OT / ICS Security</div>
+      <div class="proj-title">SCADA Modbus Attack Detection</div>
+      <p class="proj-desc">Simulated Modbus packet injection attacks against a SCADA environment using LogixPro PLC simulation. Detected and documented attack patterns using Security Onion.</p>
+      <div class="proj-tools"><span class="tool">Security Onion</span><span class="tool">Modbus</span><span class="tool">LogixPro</span><span class="tool">ICS</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Crown-Jewel-Security-Analysis---Insider-Data-Theft-at-Tesla" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">Security Risk &amp; Governance</div>
+      <div class="proj-title">Crown Jewel Analysis — Insider Threat at Tesla</div>
+      <p class="proj-desc">Applied the Bowtie risk model to an insider IP theft case. Evaluated threat actors, escalation paths, consequences, and control effectiveness against Tesla's highest-value assets.</p>
+      <div class="proj-tools"><span class="tool">Bowtie Model</span><span class="tool">Risk Analysis</span><span class="tool">Insider Threat</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Phishing-Simulation-SOC-Investigation-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Phishing &amp; Email Security</div>
+      <div class="proj-title">Phishing Simulation &amp; SOC Investigation Lab</div>
+      <p class="proj-desc">Deployed GoPhish on Ubuntu to run a credential harvesting campaign against a Windows target via a spoofed IT portal. Investigated the full attack chain in Splunk using EventID 4688 parent-child process analysis, mapped to MITRE ATT&CK T1566.002, T1204.001, T1078, T1056.003.</p>
+      <div class="proj-tools"><span class="tool">GoPhish</span><span class="tool">Splunk</span><span class="tool">EventID 4688</span><span class="tool">MITRE ATT&CK</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/AES-Image-Encryption-Analysis" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">Applied Cryptography</div>
+      <div class="proj-title">AES Image Encryption Analysis</div>
+      <p class="proj-desc">Implemented AES encryption on digital images and demonstrated visual pattern leakage in ECB mode versus CBC — illustrating why cipher mode selection matters in real-world deployments.</p>
+      <div class="proj-tools"><span class="tool">AES</span><span class="tool">Python</span><span class="tool">ECB vs CBC</span><span class="tool">Cryptanalysis</span></div>
+    </a>
+
+    <a class="proj" href="https://github.com/DurgaRamireddy/Classical-Cryptanalysis-Lab" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">Applied Cryptography</div>
+      <div class="proj-title">Classical Cryptanalysis Lab</div>
+      <p class="proj-desc">Analyzed and decrypted classical ciphers including Caesar, Beaufort, and substitution ciphers. Applied frequency analysis and known-plaintext techniques to break each cipher and document the methodology.</p>
+      <div class="proj-tools"><span class="tool">CrypTool 2</span><span class="tool">Frequency Analysis</span><span class="tool">Cryptanalysis</span></div>
+    </a>
+
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="sec-label">Technical Stack</div>
+  <h2 class="sec-title">Skills &amp; Tools</h2>
+  <p class="sec-sub">Built through hands-on lab work, not just coursework.</p>
+  <div class="skills-grid">
+    <div>
+      <div class="skill-col-title">SIEM &amp; Detection</div>
+      <ul class="skill-list">
+        <li>Splunk (SPL, dashboards)</li>
+        <li>Kibana / ELK Stack</li>
+        <li>Microsoft Defender for Business</li>
+        <li>Security Onion</li>
+        <li>Alert triage &amp; escalation</li>
+        <li>Log correlation &amp; analysis</li>
+      </ul>
+    </div>
+    <div>
+      <div class="skill-col-title">Network &amp; Endpoint</div>
+      <ul class="skill-list">
+        <li>Zeek, Suricata, Wireshark</li>
+        <li>IDS/IPS deployment &amp; tuning</li>
+        <li>Active Directory / Windows Server</li>
+        <li>PowerShell forensic analysis</li>
+        <li>Packet capture &amp; traffic analysis</li>
+        <li>Windows Event Log investigation</li>
+      </ul>
+    </div>
+    <div>
+      <div class="skill-col-title">Frameworks &amp; Adversary Emulation</div>
+      <ul class="skill-list">
+        <li>MITRE ATT&CK (mapping &amp; triage)</li>
+        <li>MITRE Caldera C2</li>
+        <li>GoPhish (phishing simulation)</li>
+        <li>Kali Linux</li>
+        <li>Threat intelligence analysis</li>
+        <li>APT reconstruction &amp; IOC analysis</li>
+        <li>OT/ICS protocol security</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="sec-label">Get in Touch</div>
+  <div class="contact-grid">
+    <div>
+      <p class="contact-intro">Open to SOC Analyst and Junior Security Analyst roles.</p>
+      <p class="contact-note">MS Cybersecurity candidate graduating May 2026. Available on OPT. Strong preference for organizations with documented sponsorship history. References and a full project walkthrough available on request.</p>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="/cdn-cgi/l/email-protection#6f0b1a1d080e411d0e02061d0a0b0b165f5c2f08020e0603410c0002">
+        <div><div class="contact-type">Email</div><div class="contact-val"><span class="__cf_email__" data-cfemail="4b2f3e392c2a65392a2622392e2f2f327b780b2c262a222765282426">[email&#160;protected]</span></div></div>
+        <span class="contact-arr">↗</span>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/durga-ramireddy/" target="_blank">
+        <div><div class="contact-type">LinkedIn</div><div class="contact-val">in/durga-ramireddy</div></div>
+        <span class="contact-arr">↗</span>
+      </a>
+      <a class="contact-link" href="https://github.com/DurgaRamireddy" target="_blank">
+        <div><div class="contact-type">GitHub</div><div class="contact-val">DurgaRamireddy</div></div>
+        <span class="contact-arr">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-l">D
