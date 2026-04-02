@@ -140,7 +140,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <div class="stats">
     <div class="stat-row">
       <span class="stat-label">Documented labs</span>
-      <span class="stat-val">12<span class="stat-unit">projects</span></span>
+      <span class="stat-val">13<span class="stat-unit">projects</span></span>
     </div>
     <div class="stat-row">
       <span class="stat-label">Graduate GPA</span>
@@ -178,6 +178,14 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <h2 class="sec-title">Projects</h2>
   <p class="sec-sub">Every project below is a self-directed lab - built, executed and documented from scratch. They follow a deliberate progression: from building detection foundations, to full adversary emulation and threat intelligence, to original research identifying systematic gaps in enterprise EDR coverage. Each lab informed the next.</p>
   <div class="proj-grid">
+
+     <a class="proj" href="https://github.com/DurgaRamireddy/Active-Directory-Attack-Detection-Lab---Splunk-SIEM-Microsoft-Defender" target="_blank">
+      <span class="proj-arrow">↗</span>
+      <div class="proj-domain">SOC &middot; Identity Attacks &middot; SIEM Detection</div>
+      <div class="proj-title">Active Directory Attack & Detection Lab - Splunk SIEM + Microsoft Defender</div>
+      <p class="proj-desc">Simulated a full AD attack chain — Kerberoasting, AS-REP Roasting, Pass-the-Hash, DCSync, and BloodHound enumeration — against a live domain environment, then investigated each technique from the analyst seat using Splunk SIEM with tuned Windows audit policies. Documented detection gaps including LDAP-based enumeration generating zero events across both SIEM and EDR layers.</p>
+      <div class="proj-tools"><span class="tool">Splunk</span><span class="tool">Microsoft Defender</span><span class="tool">Impacket</span><span class="tool">BloodHound</span><span class="tool">Active Directory</span><span class="tool">Windows Server 2022</span><span class="tool">MITRE ATT&CK</span></div>
+    </a>
 
     <a class="proj" href="https://github.com/DurgaRamireddy/Enterprise-Threat-Detection-Lab---Caldera-C2-vs-Microsoft-Defender" target="_blank">
       <span class="proj-arrow">↗</span>
@@ -283,7 +291,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
     </div>
   </div>
 
-  <button onclick="var el=document.getElementById('more-projects'); var open=el.style.display==='block'; el.style.display=open?'none':'block'; this.textContent=open?'Show all 12 projects ↓':'Show less ↑';" style="margin-top:1.5rem; background:none; border:1px solid var(--rule); color:var(--ink3); font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.75rem 1.5rem; cursor:pointer; border-radius:2px; transition:all 0.2s; width:100%;">Show all 12 projects ↓</button>
+  <button onclick="var el=document.getElementById('more-projects'); var open=el.style.display==='block'; el.style.display=open?'none':'block'; this.textContent=open?'Show all projects ↓':'Show less ↑';" style="margin-top:1.5rem; background:none; border:1px solid var(--rule); color:var(--ink3); font-family:var(--mono); font-size:0.68rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.75rem 1.5rem; cursor:pointer; border-radius:2px; transition:all 0.2s; width:100%;">Show all 12 projects ↓</button>
 
 </section>
 
