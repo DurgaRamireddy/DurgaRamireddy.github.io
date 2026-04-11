@@ -140,7 +140,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <div class="stats">
     <div class="stat-row">
       <span class="stat-label">Documented labs</span>
-      <span class="stat-val">13<span class="stat-unit">projects</span></span>
+      <span class="stat-val">14<span class="stat-unit">projects</span></span>
     </div>
     <div class="stat-row">
       <span class="stat-label">Graduate GPA</span>
@@ -179,6 +179,14 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <p class="sec-sub">Every project below is a self-directed lab - built, executed and documented from scratch. They follow a deliberate progression: from building detection foundations, to full adversary emulation and threat intelligence, to original research identifying systematic gaps in enterprise EDR coverage. Each lab informed the next.</p>
   <div class="proj-grid">
 
+    <a class="proj" href="https://github.com/DurgaRamireddy/AI-Powered-Alert-Triage-with-Claude-API" target="_blank">
+     <span class="proj-arrow">↗</span>
+     <div class="proj-domain">SOC &middot; AI-Assisted Triage &middot; SIEM &middot; Threat Detection</div>
+     <div class="proj-title">AI-Powered Alert Triage with Claude API</div>
+     <p class="proj-desc">Built a Python pipeline that feeds real attack-generated Splunk alerts to the Claude API for automated Tier 1 SOC triage. Generated 38 alerts via live Kerberoasting, AS-REP Roasting, and lateral movement attacks, normalized NDJSON exports into a structured JSON schema, and displayed AI vs manual analyst verdicts in a custom dashboard. Caught a High-confidence AI hallucination during failure testing - inverted encryption type mapping on a Kerberoasting alert and documented why AI confidence scores cannot replace analyst judgment.</p>
+     <div class="proj-tools"><span class="tool">Python</span><span class="tool">Claude API</span><span class="tool">Splunk</span><span class="tool">Impacket</span><span class="tool">CrackMapExec</span><span class="tool">Active Directory</span><span class="tool">MITRE ATT&CK</span></div>
+   </a>
+     
      <a class="proj" href="https://github.com/DurgaRamireddy/Active-Directory-Attack-Detection-Lab---Splunk-SIEM-Microsoft-Defender" target="_blank">
       <span class="proj-arrow">↗</span>
       <div class="proj-domain">SOC &middot; Identity Attacks &middot; SIEM Detection</div>
@@ -203,6 +211,11 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <div class="proj-tools"><span class="tool">Splunk</span><span class="tool">SPL</span><span class="tool">HEC</span><span class="tool">MITRE ATT&CK</span><span class="tool">Kali Linux</span></div>
     </a>
 
+     </div>
+
+       <div id="more-projects" style="display:none;">
+       <div class="proj-grid" style="margin-top:1px;">
+          
     <a class="proj" href="https://github.com/DurgaRamireddy/Phishing-Simulation-SOC-Investigation-Lab" target="_blank">
       <span class="proj-arrow">↗</span>
       <div class="proj-domain">SOC &middot; Phishing Investigation</div>
@@ -210,12 +223,6 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <p class="proj-desc">Deployed GoPhish on Ubuntu to run a credential harvesting campaign via a spoofed IT portal. Investigated the full attack chain in Splunk using EventID 4688 parent-child process analysis, mapped to MITRE ATT&CK T1566.002, T1204.001, T1078, T1056.003.</p>
       <div class="proj-tools"><span class="tool">GoPhish</span><span class="tool">Splunk</span><span class="tool">EventID 4688</span><span class="tool">MITRE ATT&CK</span></div>
     </a>
-
-     </div>
-
-       <div id="more-projects" style="display:none;">
-       <div class="proj-grid" style="margin-top:1px;">
-
 
     <a class="proj" href="https://github.com/DurgaRamireddy/Home-SOC-Lab---Simulated-Intrusion-Privilege-Escalation-Investigation" target="_blank">
       <span class="proj-arrow">↗</span>
