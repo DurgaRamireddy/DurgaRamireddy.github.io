@@ -141,7 +141,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <div class="stats">
     <div class="stat-row">
       <span class="stat-label">Documented labs</span>
-      <span class="stat-val">14<span class="stat-unit">projects</span></span>
+      <span class="stat-val">15<span class="stat-unit">projects</span></span>
     </div>
     <div class="stat-row">
       <span class="stat-label">Graduate GPA</span>
@@ -211,6 +211,14 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <p class="proj-desc">Deployed Splunk Enterprise on Ubuntu, engineered a Windows log forwarding pipeline via HTTP Event Collector, simulated a multi-stage attack chain from Kali Linux (brute force + PowerShell persistence), and detected all attack stages using SPL queries. Documented findings in a formal incident report mapped to MITRE ATT&CK.</p>
       <div class="proj-tools"><span class="tool">Splunk</span><span class="tool">SPL</span><span class="tool">HEC</span><span class="tool">MITRE ATT&CK</span><span class="tool">Kali Linux</span></div>
     </a>
+
+     <a class="proj" href="https://github.com/DurgaRamireddy/DNS-Anomaly-Detection-Using-Machine-Learning" target="_blank">
+  <span class="proj-arrow">↗</span>
+  <div class="proj-domain">Blue Team &middot; Threat Detection &middot; ML Pipeline</div>
+  <div class="proj-title">DNS Anomaly Detection Using Machine Learning</div>
+  <p class="proj-desc">Built a supervised ML pipeline to detect DGA malicious domains purely from the domain string — no packet captures, no network traffic. Engineered 8 lexical features across 70,000 domains and trained four models across 16 train/test combinations. Key finding: consecutive consonant runs outranked Shannon entropy as the top DGA discriminator. Best result: ANN/MLP F1=0.8999; Random Forest recommended for production at 76× faster inference.</p>
+  <div class="proj-tools"><span class="tool">Python</span><span class="tool">Scikit-learn</span><span class="tool">Random Forest</span><span class="tool">ANN/MLP</span><span class="tool">Pandas</span><span class="tool">Jupyter</span><span class="tool">MITRE ATT&CK</span><span class="tool">Feature Engineering</span></div>
+</a>
 
      </div>
 
