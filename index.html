@@ -147,7 +147,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <div class="stats">
     <div class="stat-row">
       <span class="stat-label">Documented labs</span>
-      <span class="stat-val">15<span class="stat-unit">projects</span></span>
+      <span class="stat-val">16<span class="stat-unit">projects</span></span>
     </div>
     <div class="stat-row">
       <span class="stat-label">Graduate GPA</span>
@@ -186,6 +186,14 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <p class="sec-sub">These labs are a mix of fully self-directed projects and coursework I extended well beyond the original assignment and all executed and documented with the same rigor. They follow a deliberate progression: from building detection foundations, to full adversary emulation and threat intelligence, to original research identifying systematic gaps in enterprise EDR coverage. Each lab informed the next.</p>
   <div class="proj-grid">
 
+  <a class="proj" href="https://github.com/DurgaRamireddy/Custom-SOAR-Pipeline-with-AI-Triage" target="_blank">
+  <span class="proj-arrow">↗</span>
+  <div class="proj-domain">SOAR &middot; AI Triage &middot; Honeytoken Detection &middot; Threat Enrichment</div>
+  <div class="proj-title">Custom SOAR Pipeline with AI Triage</div>
+  <p class="proj-desc">Extended the AI triage engine into a full SOAR pipeline. Two alert sources feed the same flow: real Splunk AD attack alerts and honeytoken triggers from fake privileged artifacts seeded into Active Directory. Every alert is enriched via VirusTotal and AbuseIPDB before Claude triages it, then a decision engine routes it to auto-close or escalate. Documented two AI behavior findings: enrichment measurably shifts Claude's confidence and verdict; AI hedges on honeytoken alerts where the false positive rate is zero by design, leading to a rule-based bypass for that path.</p>
+  <div class="proj-tools"><span class="tool">Python</span><span class="tool">Claude API</span><span class="tool">Splunk</span><span class="tool">VirusTotal</span><span class="tool">AbuseIPDB</span><span class="tool">Active Directory</span><span class="tool">MITRE ATT&CK</span></div>
+</a>
+     
     <a class="proj" href="https://github.com/DurgaRamireddy/AI-Powered-Alert-Triage-with-Claude-API" target="_blank">
      <span class="proj-arrow">↗</span>
      <div class="proj-domain">SOC &middot; AI-Assisted Triage &middot; SIEM &middot; Threat Detection</div>
@@ -227,7 +235,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <span class="proj-arrow">↗</span>
   <div class="proj-domain">Blue Team &middot; Threat Detection &middot; ML Pipeline</div>
   <div class="proj-title">DNS Anomaly Detection Using Machine Learning</div>
-  <p class="proj-desc">Built a supervised ML pipeline to detect DGA malicious domains purely from the domain string — no packet captures, no network traffic. Engineered 8 lexical features across 70,000 domains and trained four models across 16 train/test combinations. Key finding: consecutive consonant runs outranked Shannon entropy as the top DGA discriminator. Best result: ANN/MLP F1=0.8999; Random Forest recommended for production at 76× faster inference.</p>
+  <p class="proj-desc">Built a supervised ML pipeline to detect DGA malicious domains purely from the domain string - no packet captures, no network traffic. Engineered 8 lexical features across 70,000 domains and trained four models across 16 train/test combinations. Key finding: consecutive consonant runs outranked Shannon entropy as the top DGA discriminator. Best result: ANN/MLP F1=0.8999; Random Forest recommended for production at 76× faster inference.</p>
   <div class="proj-tools"><span class="tool">Python</span><span class="tool">Scikit-learn</span><span class="tool">Random Forest</span><span class="tool">ANN/MLP</span><span class="tool">Pandas</span><span class="tool">Jupyter</span><span class="tool">MITRE ATT&CK</span><span class="tool">Feature Engineering</span></div>
 </a>
 
@@ -325,12 +333,6 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <h2 class="sec-title">Upcoming</h2>
   <p class="sec-sub">A few things currently being built. Details soon.</p>
   <div class="proj-grid">
-
-    <div class="proj" style="cursor:default;">
-      <div class="proj-domain">SOAR &middot; AI Triage &middot; Automation</div>
-      <div class="proj-title">Custom SOAR Pipeline with AI-Driven Triage</div>
-      <p class="proj-desc">A Python-built enrichment engine, AI triage layer, and decision engine, with a Cortex custom analyzer integration layered on top of the original build.</p>
-    </div>
 
     <div class="proj" style="cursor:default;">
       <div class="proj-domain">Threat Intelligence &middot; Research</div>
