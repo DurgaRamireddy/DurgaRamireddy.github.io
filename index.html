@@ -147,7 +147,7 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
   <div class="stats">
     <div class="stat-row">
       <span class="stat-label">Documented labs</span>
-      <span class="stat-val">16<span class="stat-unit">projects</span></span>
+      <span class="stat-val">17<span class="stat-unit">projects</span></span>
     </div>
     <div class="stat-row">
       <span class="stat-label">Graduate GPA</span>
@@ -201,6 +201,14 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
      <p class="proj-desc">Built a Python pipeline that feeds real attack-generated Splunk alerts to the Claude API for automated Tier 1 SOC triage. Generated 38 alerts via live Kerberoasting, AS-REP Roasting, and lateral movement attacks, normalized NDJSON exports into a structured JSON schema, and displayed AI vs manual analyst verdicts in a custom dashboard. Caught a High-confidence AI hallucination during failure testing - inverted encryption type mapping on a Kerberoasting alert and documented why AI confidence scores cannot replace analyst judgment.</p>
      <div class="proj-tools"><span class="tool">Python</span><span class="tool">Claude API</span><span class="tool">Splunk</span><span class="tool">Impacket</span><span class="tool">CrackMapExec</span><span class="tool">Active Directory</span><span class="tool">MITRE ATT&CK</span></div>
    </a>
+
+     <a class="proj" href="https://github.com/DurgaRamireddy/Fraud-Cluster-OSINT-Investigation" target="_blank">
+  <span class="proj-arrow">↗</span>
+  <div class="proj-domain">OSINT &middot; Threat Intelligence &middot; Infrastructure Attribution &middot; Brand Protection</div>
+  <div class="proj-title">Fraud Cluster OSINT Investigation</div>
+  <p class="proj-desc">Traced a single suspicious e-commerce domain through WHOIS, DNS resolution, IP attribution, and BGP/ASN analysis to a shared hosting IP running 173 counterfeit storefronts impersonating 20+ unrelated brands. Verified findings via independent tools and manual spot-checks, then reported across four channels (registrar, hosting provider, Google Safe Browsing, RIPE NCC). Post-report testing found the reported domain was blocked at the browser level, but the underlying server and unreported cluster members remained fully operational - documented as evidence for registrar/hosting-level action being required for actual infrastructure disruption.</p>
+  <div class="proj-tools"><span class="tool">WHOIS</span><span class="tool">RIPE Database</span><span class="tool">BGP/ASN Analysis</span><span class="tool">Reverse-IP/Passive DNS</span><span class="tool">Shodan</span><span class="tool">Google Safe Browsing</span></div>
+</a>
      
      <a class="proj" href="https://github.com/DurgaRamireddy/Active-Directory-Attack-Detection-Lab---Splunk-SIEM-Microsoft-Defender" target="_blank">
       <span class="proj-arrow">↗</span>
@@ -218,10 +226,6 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <div class="proj-tools"><span class="tool">Microsoft Defender</span><span class="tool">MITRE Caldera</span><span class="tool">Active Directory</span><span class="tool">Windows Server 2022</span><span class="tool">MITRE ATT&CK</span></div>
     </a>
      
-  </div>     
-
-       <div id="more-projects" style="display:none;">
-       <div class="proj-grid" style="margin-top:1px;">
           
     <a class="proj" href="https://github.com/DurgaRamireddy/Splunk-HOME-SOC-Detection-Lab---End-to-End-Alert-Lifecycle" target="_blank">
       <span class="proj-arrow">↗</span>
@@ -231,6 +235,10 @@ footer { max-width: 1280px; margin: 0 auto; padding: 2.5rem 3rem; display: flex;
       <div class="proj-tools"><span class="tool">Splunk</span><span class="tool">SPL</span><span class="tool">HEC</span><span class="tool">MITRE ATT&CK</span><span class="tool">Kali Linux</span></div>
     </a>
 
+            </div>     
+
+       <div id="more-projects" style="display:none;">
+       <div class="proj-grid" style="margin-top:1px;">
           
      <a class="proj" href="https://github.com/DurgaRamireddy/DNS-Anomaly-Detection-Using-Machine-Learning" target="_blank">
   <span class="proj-arrow">↗</span>
