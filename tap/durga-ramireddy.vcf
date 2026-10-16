@@ -1,6 +1,9 @@
-Durga Ramireddy
+BEGIN:VCARD
+VERSION:3.0
+N:Ramireddy;Durga Sai Sri;;;
 FN:Durga Sai Sri Ramireddy
-EMAIL: durga.ramireddy03@gmail.com
-Linkedin: https://www.linkedin.com/in/durga-ramireddy
-Portfolio: https://durgaramireddy.github.io/
+EMAIL;TYPE=INTERNET:durga.ramireddy03@gmail.com
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/durga-ramireddy
+URL;TYPE=Portfolio:https://durgaramireddy.github.io/
 NOTE:MS Cybersecurity, University of Houston. Met at OneCon26.
+END:VCARD
